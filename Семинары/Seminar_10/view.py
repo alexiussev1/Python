@@ -48,3 +48,11 @@ def new_contact() -> dict:
     comment = input(txt.new_comment)
     print()
     return {'name': name, 'phone': phone, 'comment': comment}
+
+def confir(massage: str) -> bool:
+        print()
+        answer = input(massage + ' y/n? -> ')
+        if answer.lower() =='y':
+            return True
+        else:
+            return False
