@@ -11,6 +11,9 @@ def main_menu() -> int:
 
     choise = ''
 
-    while choise.isdigit() and 0 < int(choise) < 9:
+    while True:
         choise = input('Выберите пунтк меню: ')
-    return int(choise)
+        if choise.isdigit() and 0 < int(choise) < 9:
+            return int(choise)
+        else:
+            print('Введите число от 1 до 8')
