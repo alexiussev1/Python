@@ -28,7 +28,7 @@ def save_file():
     with open (PATH, 'w', encoding='UTF-8') as file:
         file.write(data)
 
-def add_contacts(contact: dict):
+def add_contact(contact: dict):
     global phone_book
     phone_book.append(contact)
 
