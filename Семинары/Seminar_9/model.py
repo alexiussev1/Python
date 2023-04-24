@@ -1,6 +1,6 @@
 phone_book =[]
 start_phone_book =[]
-PATH = 'Семинары\Seminar_10\phone_book.txt'         #'Семинары\Seminar_10\phone_book.txt'
+PATH = 'Семинары\Seminar_9\phone_book.txt'         #'Семинары\Seminar_10\phone_book.txt'
 
 def get_pb():
     global phone_book
@@ -38,3 +38,8 @@ def exit_pb():
         return False
     else:
         return True
+    
+def find(find_info:list):
+    global phone_book
+    for n in phone_book:
+        if find_info[0].lower() in phone_book{}

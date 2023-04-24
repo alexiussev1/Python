@@ -23,9 +23,9 @@ def main_menu() -> int:
 
 
 def print_info(message: str):
-    print('\n'+'-'*len(message))
+    print('\n'+'-'*len(message)) #черточки над сообщением  длиной сообщения
     print(message)
-    print('-'*len(message) + '\n')
+    print('-'*len(message) + '\n') #черточки под сообщением длиной сообщения
 
 
 # внутри списка обозначаем словарики
@@ -58,3 +58,9 @@ def confir(massage: str) -> bool:
         return True
     else:
         return False
+    
+def find_contact() -> list:
+    find_name_field = input(txt.find_enter_name)
+    find_phone_field = input(txt.find_enter_phone)
+    print()
+    return{find_name_field, find_phone_field}

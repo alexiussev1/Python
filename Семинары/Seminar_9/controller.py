@@ -18,7 +18,8 @@ def start_pb():
                 model.add_contact(contact)
                 view.print_info(txt.new_contact_success_full)
             case 5:
-                pass
+                find_info = view.find_contact
+                model.find(find_info)
             case 6:
                 pass
             case 7:
