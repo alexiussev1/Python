@@ -1,7 +1,7 @@
 phone_book = []
 start_phone_book = []
 # 'Семинары\Seminar_10\phone_book.txt'
-PATH = 'Семинары\Seminar_9\phone_book.txt'
+PATH = 'Семинары\HomeWork9\phone_book.txt'
 
 
 def get_pb():
