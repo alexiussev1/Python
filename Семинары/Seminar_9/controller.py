@@ -1,4 +1,7 @@
-import view, model, text_fields as txt
+import view
+import model
+import text_fields as txt
+
 
 def start_pb():
     while True:
@@ -11,7 +14,7 @@ def start_pb():
                 model.save_file()
                 view.print_info(txt.save_success_full)
             case 3:
-                pb= model.get_pb()
+                pb = model.get_pb()
                 view.show_contacts(pb, txt.no_contact_or_file)
             case 4:
                 contact = view.new_contact()
@@ -19,17 +22,25 @@ def start_pb():
                 view.print_info(txt.new_contact_success_full)
             case 5:
                 find_info = view.find_contact()
-                model.find(find_info)
+                pb = model.find(find_info)
+                view.show_contacts(pb, txt.no_miss)
                 # # find_info = view.find_contact
             case 6:
-                pass
+                pb = model.get_pb()
+                view.show_contacts(pb, txt.no_miss)
+                change_number_comtact = view.number_contact(pb, txt.no_miss)
+                position_change = view.change_menu()
+                model.change(change_number_comtact, position_change)
             case 7:
-                pass
+                pb = model.get_pb()
+                del_number_contakt = view.number_contact(pb, txt.no_miss)
+                model.delete(del_number_contakt)
+                view.show_contacts(pb, txt.no_contact_or_file)
             case 8:
                 if model.exit_pb():
                     if view.confirm(txt.is_change):
                         model.save_file()
                 view.print_info(txt.bay_bay)
                 exit()
-                
+
             # case _: если вcе другое не сработало

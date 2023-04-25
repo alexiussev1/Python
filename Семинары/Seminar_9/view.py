@@ -21,11 +21,27 @@ def main_menu() -> int:
         else:
             print('Введите число от 1 до 8')
 
+def change_menu() -> int:
+    print('''Изменить контакт
+    1. ФИО
+    2. Телефон
+    3. Заметки
+    4. Все поля''')
+
+    # choise = ''
+
+    while True:
+        choise = input('Выберите пунтк меню: ')
+        if choise.isdigit() and 0 < int(choise) < 5:
+            return int(choise)
+        else:
+            print('Введите число от 1 до 45')
+
 
 def print_info(message: str):
-    print('\n'+'-'*len(message)) #черточки над сообщением  длиной сообщения
+    print('\n'+'-'*len(message))  # черточки над сообщением  длиной сообщения
     print(message)
-    print('-'*len(message) + '\n') #черточки под сообщением длиной сообщения
+    print('-'*len(message) + '\n')  # черточки под сообщением длиной сообщения
 
 
 # внутри списка обозначаем словарики
@@ -50,6 +66,7 @@ def new_contact() -> dict:
     print()
     return {'name': name, 'phone': phone, 'comment': comment}
 
+
 def find_contact() -> dict:
     print()
     name = input(txt.find_name)
@@ -58,6 +75,14 @@ def find_contact() -> dict:
     return {'name': name, 'phone': phone}
 
 
+def number_contact(book: list[dict],  message: str):
+    print()
+    number = -1
+    while number > len(book) or number < 1:
+        number=int(input(txt.del_position))
+        if number > len(book) or number < 1: print(message)
+    return(number)
+
 def confir(massage: str) -> bool:
     print()
     answer = input(massage + ' y/n? -> ')
@@ -65,9 +90,3 @@ def confir(massage: str) -> bool:
         return True
     else:
         return False
-    
-def find_contact() -> list:
-    find_name_field = input(txt.find_enter_name)
-    find_phone_field = input(txt.find_enter_phone)
-    print()
-    return{find_name_field, find_phone_field}
