@@ -39,7 +39,25 @@ def exit_pb():
     else:
         return True
     
-def find(find_info:list):
+def find(find_info: dict):
     global phone_book
-    for n in phone_book:
-        if find_info[0].lower() in phone_book{}
+    find_book = list[dict]
+    print(find_info)
+    print(find_info[1], find_info[2])
+    print(phone_book)
+
+
+    # if find_info('name') != "" and find_info('phone') != "":
+    #     for i, j in phone_book:
+    #         if find_info[0,0] == phone_book[i,0] and find_info[0,1] == phone_book[i,1]:
+
+
+
+
+    
+    # elif find_info('name') == "" and find_info('phone') != "":
+    # elif find_info('name') != "" and find_info('phone') == "":
+    
+    
+    # for n in phone_book:
+    # #     if find_info[0].lower() in phone_book

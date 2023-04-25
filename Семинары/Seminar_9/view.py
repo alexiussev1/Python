@@ -50,6 +50,13 @@ def new_contact() -> dict:
     print()
     return {'name': name, 'phone': phone, 'comment': comment}
 
+def find_contact() -> dict:
+    print()
+    name = input(txt.find_name)
+    phone = input(txt.find_phone)
+    print()
+    return {'name': name, 'phone': phone}
+
 
 def confir(massage: str) -> bool:
     print()

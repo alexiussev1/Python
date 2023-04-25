@@ -14,12 +14,13 @@ def start_pb():
                 pb= model.get_pb()
                 view.show_contacts(pb, txt.no_contact_or_file)
             case 4:
-                contact = view.new_contact
+                contact = view.new_contact()
                 model.add_contact(contact)
                 view.print_info(txt.new_contact_success_full)
             case 5:
-                find_info = view.find_contact
+                find_info = view.find_contact()
                 model.find(find_info)
+                # # find_info = view.find_contact
             case 6:
                 pass
             case 7:
